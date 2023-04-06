@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name generator</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='baby.png') }}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+</head>
+
+<body
+  class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 min-h-screen flex flex-col items-center py-12 text-white">
+  <h3 class="text-2xl font-bold my-4">Generate the first name for the last name</h3>
+  <form action="/" method="post" class="flex flex-col w-80">
+    <input type="text" name="Last_Name" placeholder="Enter a last name" required
+      class="px-4 py-2 bg-white bg-opacity-10 text-white border border-white border-opacity-50 rounded mb-6" />
+    <input type="submit" value="Generate First name"
+      class="px-4 py-2 bg-indigo-500 text-white font-semibold rounded cursor-pointer" />
+  </form>
+  {% if Last_Name %}
+  <div class="text-xl font-bold mt-8">{{ Last_Name }}</div>
+  {% endif %}
+  {% if result %}
+  <div class="text-xl font-bold mt-8">{{ result }}</div>
+  {% endif %}
+</body>
+
+</html>
