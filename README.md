@@ -1,7 +1,7 @@
 ![view](pic.png)
 
 
-This is an first name generator app using the OpenAI API, modified from example Openai app
+This is a first name generator app using the OpenAI API, modified from example Openai app
 ## Setup
 
 
